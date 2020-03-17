@@ -1,34 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
 public class MouseSelect : MonoBehaviour
 {
 
-    public GameObjectEvent ItemSelect;
+    public GameObjectEvent ItemSelect; // An event to call when a gameobject was successfully clicked on
 
-    private Ray ray;
-    private RaycastHit hit;
-    private Camera camera;
+    private Ray ray; // The ray emitted from the camera
+    private RaycastHit hit; // The last hit that was made
+    private new Camera camera; // The camera that this script is attached to
 
     void Start()
     {
-        camera = GetComponent<Camera>();
+        camera = GetComponent<Camera>(); // Get the camera on this gameobject
     }
 
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) // If clicking
         {
-            ray = camera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
+            ray = camera.ScreenPointToRay(Input.mousePosition); // Create a ray from the mouse position
+            if (Physics.Raycast(ray, out hit)) // If something was hit
             {
-                print("Clicked on " + hit.collider.name);
-                ItemSelect.Invoke(hit.collider.gameObject);
+                print("Clicked on " + hit.collider.name); // Print a debug
+                ItemSelect.Invoke(hit.collider.gameObject); // Invoke the event
             }
         }
     }
