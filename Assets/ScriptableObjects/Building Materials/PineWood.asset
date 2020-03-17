@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a6ddbc96b98e64198595a888944db2, type: 3}
+  m_Name: PineWood
+  m_EditorClassIdentifier: 
+  Material: {fileID: 2100000, guid: ad5a400d086e34947b5e0955e599ed28, type: 2}
+  Source: {fileID: 5250108146114375614, guid: 53338953acbd0ad429fb22c7936a1e54, type: 3}
