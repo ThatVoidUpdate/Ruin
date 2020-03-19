@@ -6,4 +6,5 @@ public class BuildingMaterial : ScriptableObject
 {
     public Material Material;
     public GameObject Source;
+
 }

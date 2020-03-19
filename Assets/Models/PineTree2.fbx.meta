@@ -1,43 +1,15 @@
 fileFormatVersion: 2
-guid: 11499b209de460f468644952df77a6df
+guid: 1add48852de715c4fbed14d9cc70ab55
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: BirchTree0
-    100002: BirchTree1
-    100004: //RootNode
-    100006: Cube.000
-    100008: Cube.001
-    400000: BirchTree0
-    400002: BirchTree1
-    400004: //RootNode
-    400006: Cube.000
-    400008: Cube.001
+    100000: //RootNode
+    400000: //RootNode
     2100000: Material.001
-    2100002: No Name
-    2300000: BirchTree0
-    2300002: BirchTree1
-    2300004: Cube.000
-    2300006: Cube.001
-    3300000: BirchTree0
-    3300002: BirchTree1
-    3300004: Cube.000
-    3300006: Cube.001
-    4300000: BirchTree0
-    4300002: Cube.001
-    4300004: BirchTree1
-    4300006: Cube.000
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: f412ff3c74e63bb479223bb92cedd319, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: e2e3b8580a640814db0eee07e56c7767, type: 2}
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: PineTree1
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -68,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 300
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1

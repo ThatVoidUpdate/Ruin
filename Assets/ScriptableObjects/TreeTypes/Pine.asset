@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d424ad413674b4a87449d03dbc38be, type: 3}
+  m_Name: Pine
+  m_EditorClassIdentifier: 
+  Material: {fileID: 11400000, guid: 0a33ed2e2b881c442880db20c8b322e7, type: 2}
+  TreeModels:
+  - {fileID: 3140451493941649686, guid: 53338953acbd0ad429fb22c7936a1e54, type: 3}
+  - {fileID: 703949510220238361, guid: 0f76149e91a128c49aa7da2b378ff25d, type: 3}
+  - {fileID: 8389906776299415673, guid: 77e856b60948c4e4683ef2e17194b025, type: 3}
+  - {fileID: 7924664364153905106, guid: 320a7d3480558aa468e3cb316ce8abd1, type: 3}
