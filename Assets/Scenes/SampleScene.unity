@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
   - component: {fileID: 534669907}
+  - component: {fileID: 534669908}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -306,6 +307,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 11400000, guid: f46222adba7ce194195cfa88c5e5ee94, type: 2}
+--- !u!114 &534669908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e820bb8af7eb6540b5ada98e636b282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClearTrees:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 781199408}
+        m_MethodName: ClearTrees
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  GenerateTrees:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 583190747}
+        m_MethodName: PlaceObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  ChangeType:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 583190747}
+        m_MethodName: Changetype
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: TreeTypeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  types:
+  - {fileID: 11400000, guid: 5de12cdc105dd3640bd8ae1077b05116, type: 2}
+  - {fileID: 11400000, guid: 383d5bece749d334392b5cc4cb4dc4ee, type: 2}
+  - {fileID: 11400000, guid: 0d5c6cda204d7094d9b0b11a3b6bdeb6, type: 2}
+  WaitTime: 3
 --- !u!1 &583190746
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +406,22 @@ MonoBehaviour:
   type: {fileID: 11400000, guid: 0d5c6cda204d7094d9b0b11a3b6bdeb6, type: 2}
   TreePrefab: {fileID: 2352635759935464515, guid: c243a5a0fe86dd04cb7b7d6d9607e8ab,
     type: 3}
+  AddTree:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 781199408}
+        m_MethodName: AddTree
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: GameObjectEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!4 &583190748
 Transform:
   m_ObjectHideFlags: 0
@@ -353,6 +435,49 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &781199407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781199409}
+  - component: {fileID: 781199408}
+  m_Layer: 0
+  m_Name: TreeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &781199408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781199407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3729973b137474640a503f697fa3767e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &781199409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781199407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1194176607
 GameObject:
@@ -403,7 +528,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 88cf1c7adc800b94b84c804551f2a382, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

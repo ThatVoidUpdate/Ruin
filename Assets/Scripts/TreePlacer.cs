@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TreePlacer : ObjectPlacer
 {
     public TreeType type;
     public Tree TreePrefab;
 
-    List<Vector2> placeLocations = new List<Vector2>();
+    public GameObjectEvent AddTree;
+
+    List<Vector2> placeLocations;
     public override void PlaceObjects() 
     {
+        placeLocations = new List<Vector2>();
         int fails = 0;
         while (fails < MaxFailIterations)
         {
@@ -35,10 +39,23 @@ public class TreePlacer : ObjectPlacer
             }
         }
 
+        StartCoroutine(PlaceTrees());
+        
+    }
+
+    public IEnumerator PlaceTrees()
+    {
         foreach (Vector2 position in placeLocations)
         {
             Tree CreatedTree = Instantiate(TreePrefab, new Vector3(position.x, transform.position.y, position.y), Quaternion.Euler(-90, 0, 0));
             CreatedTree.type = type;
+            AddTree.Invoke(CreatedTree.gameObject);
         }
+        yield return new WaitForSeconds(0);
+    }
+
+    public void Changetype(TreeType _type)
+    {
+        type = _type;
     }
 }

@@ -19,5 +19,6 @@ public class Tree : MonoBehaviour
         filter.mesh = obj.GetComponent<MeshFilter>().sharedMesh;
         rend.material = type.Material.Material;
         transform.localScale = obj.transform.localScale;
+        transform.rotation = Quaternion.Euler(-90, Random.Range(0, 360), 0);
     }
 }
