@@ -18,3 +18,4 @@ MonoBehaviour:
   - {fileID: 703949510220238361, guid: 0f76149e91a128c49aa7da2b378ff25d, type: 3}
   - {fileID: 8389906776299415673, guid: 77e856b60948c4e4683ef2e17194b025, type: 3}
   - {fileID: 7924664364153905106, guid: 320a7d3480558aa468e3cb316ce8abd1, type: 3}
+  MinPlaceRadius: 3.2

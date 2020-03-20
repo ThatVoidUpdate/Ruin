@@ -16,3 +16,4 @@ MonoBehaviour:
   TreeModels:
   - {fileID: 8341692485792254144, guid: 2a6ac3e2e8b88714f80a4c274825f800, type: 3}
   - {fileID: 4985136077012506096, guid: ccf88d73f70939d49923d155da44bcde, type: 3}
+  MinPlaceRadius: 0.8

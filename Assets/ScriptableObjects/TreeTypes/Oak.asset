@@ -15,3 +15,4 @@ MonoBehaviour:
   Material: {fileID: 11400000, guid: 71f91ddf22306c749b75bacc7204880f, type: 2}
   TreeModels:
   - {fileID: 5839398118119432448, guid: 4820c22095f501949b00c3c0483431aa, type: 3}
+  MinPlaceRadius: 2.5
