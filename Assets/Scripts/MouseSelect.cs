@@ -22,8 +22,29 @@ public class MouseSelect : MonoBehaviour
             ray = camera.ScreenPointToRay(Input.mousePosition); // Create a ray from the mouse position
             if (Physics.Raycast(ray, out hit)) // If something was hit
             {
-                print("Clicked on " + hit.collider.name); // Print a debug
-                ItemSelect.Invoke(hit.collider.gameObject); // Invoke the event
+                foreach (MonoBehaviour script in hit.collider.GetComponents<MonoBehaviour>())
+                {
+                    if (script is IClickable)
+                    {
+                        IClickable clickable = (IClickable)script;
+                        clickable.LeftClick();
+                    }
+                }
+            }
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            ray = camera.ScreenPointToRay(Input.mousePosition); // Create a ray from the mouse position
+            if (Physics.Raycast(ray, out hit)) // If something was hit
+            {
+                foreach (MonoBehaviour script in hit.collider.GetComponents<MonoBehaviour>())
+                {
+                    if (script is IClickable)
+                    {
+                        IClickable clickable = (IClickable)script;
+                        clickable.RightClick();
+                    }
+                }
             }
         }
     }
