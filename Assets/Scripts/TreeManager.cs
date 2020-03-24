@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class TreeManager : MonoBehaviour
 {
+    public PlayerManager playerManager;
     List<GameObject> Trees = new List<GameObject>();
     public void AddTree(GameObject tree)
     {
         Trees.Add(tree);
+        tree.GetComponent<Tree>().RightClickEvent.AddListener(delegate{playerManager.UpdateTargetPosition(tree);});
     }
 
     public void ClearTrees()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Renderer))]
 [RequireComponent(typeof(MeshFilter))]
@@ -12,6 +13,8 @@ public class Tree : MonoBehaviour, IClickable
     private GameObject obj;
     private MeshFilter filter;
     private MeshCollider collider;
+    public Vector3Event LeftClickEvent;
+    public Vector3Event RightClickEvent;
 
     void Start()
     {
@@ -29,10 +32,12 @@ public class Tree : MonoBehaviour, IClickable
     public void LeftClick()
     {
         Debug.Log("Left clicked on tree of type " + type.name);
+        LeftClickEvent.Invoke(transform.position);
     }
 
     public void RightClick()
     {
         Debug.Log("Right clicked on tree of type " + type.name);
+        RightClickEvent.Invoke(transform.position);
     }
 }

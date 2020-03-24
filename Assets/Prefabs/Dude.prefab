@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7444371097561200711}
   - component: {fileID: 7444371097562495079}
   - component: {fileID: 7444371097563495079}
+  - component: {fileID: 8121163047246205474}
+  - component: {fileID: 5664172023461958658}
   m_Layer: 0
   m_Name: Dude
   m_TagString: Untagged
@@ -77,3 +79,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8121163047246205474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7444371097561490535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c2bf7c9333249f47a879350f0e32821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetPosition: {x: 0, y: 0, z: 0}
+  Reach: 3
+  IsSelected: 0
+  MovementSpeed: 1
+--- !u!64 &5664172023461958658
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7444371097561490535}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: c897a521bd24e5a4ab85c73ff6baef7e, type: 3}
